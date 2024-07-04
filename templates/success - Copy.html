@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align content */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px; /* Adjust padding for button size */
+            margin: 10px; /* Adjust margin for spacing */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-blue {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .btn-blue:hover {
+            background-color: #45a049;
+        }
+        .btn-yellow {
+            background-color: #f3d250;
+            color: #333;
+        }
+        .btn-yellow:hover {
+            background-color: #f1c40f;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center; /* Center align items horizontally */
+            margin-top: 20px; /* Adjust top margin for spacing */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Success!</h1>
+        <p>Your XML file has been processed and data has been uploaded to Google Sheets.</p>
+        
+        
+        
+        <div class="btn-container">
+            <a href="/" class="btn btn-blue">Upload Another File</a>
+            <a href="{{ url_for('download_excel') }}" class="btn btn-yellow">Download Excel</a>
+            <a href="https://docs.google.com/spreadsheets/d/1Nw8Kda2lXvXiuHB7-qjZZqjXc_bppETccZJvnXKJM0c/edit?usp=sharing" target="_blank" class="btn btn-blue">Open File on Google Drive</a>
+        </div>
+    </div>
+</body>
+</html>
